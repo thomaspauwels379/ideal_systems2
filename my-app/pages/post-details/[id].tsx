@@ -20,6 +20,7 @@ const Home: React.FC = () => {
 
   return (
     <main className="">
+        <Link href={"/"}>Close</Link>
     </main>
   )
 }
