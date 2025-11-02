@@ -17,7 +17,6 @@ const Home: React.FC = () => {
     setComments(parsedComments);
   }
   
-  
   const getPost = async () => {
     const response = await PostService.getAllPosts();
     const parsedPosts:Post[] = await response.json();
@@ -26,8 +25,12 @@ const Home: React.FC = () => {
         setPost(post);
     }
   }
-  
 
+    useEffect(()=> {
+        getPost();
+        getPostComments();
+    },[])
+  
   const router = useRouter();
 
   return (
