@@ -39,7 +39,7 @@ const Home: React.FC = () => {
           filteredPosts.map(post => (
             <li key={post.id}>
               <p>{post.title}</p>
-              <Link href={"/posts/"}>View</Link>
+              <Link href={`/post-details/${post.id}`}>View</Link>
             </li>
           ))
         )}
