@@ -39,7 +39,7 @@ const Home: React.FC = () => {
           <p>{errorMessage.message}</p>
         </div>
       )}
-        {filteredPosts && (
+      {!errorMessage && filteredPosts && (
           <ul>
           {filteredPosts.map(post => (
             <li  key={post.id}>
@@ -50,6 +50,11 @@ const Home: React.FC = () => {
             </li>
           ))}
           </ul>
+        )}
+        {!errorMessage && filteredPosts.length === 0 && (
+          <div>
+            <p>no posts found with this name</p>
+          </div>
         )}
     </main>
   )

@@ -13,7 +13,7 @@ const Home: React.FC = () => {
   const [errorMessage,setErrormessage] = useState<ErrorMessage>();
 
   const getPostComments = async () => {
-    const response = await PostService.getPostCommentsById(1);
+    const response = await PostService.getPostCommentsByPostId(1);
     if (!response.ok){
       setErrormessage({message:"Failed to retrieve data, please try again later."})
       return;
