@@ -62,7 +62,7 @@ const Home: React.FC = () => {
 
   return (
     <main className="">
-        <Link href={"/"}>Close</Link>
+        <Link href={"/"}><button>Close</button></Link>
         {errorMessage && (
           <div>
             <p>{errorMessage.message}</p>
