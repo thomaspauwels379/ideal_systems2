@@ -2,12 +2,13 @@ import React from 'react'
 
 type Props = {
     setInput:Function
+    placeholder:string
 }
 
-export const Searchbar: React.FC<Props> = ({ setInput }: Props) => {
+export const Searchbar: React.FC<Props> = ({ setInput, placeholder }: Props) => {
     return(
         <div>
-            <input onChange={(text) => setInput(text.target.value)} type="search"/>
+            <input placeholder={placeholder} onChange={(text) => setInput(text.target.value)} type="search"/>
         </div>
     )
 }

@@ -8,6 +8,16 @@ const getAllPosts = () => {
   })
 }
 
+const getPostById = (postId:string) => {
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL
+  return fetch(apiUrl + `/posts/${postId}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+}
+
 const getPostCommentsById = (postId:number) => {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL
   return fetch(apiUrl + `/posts/${postId}/comments`, {
@@ -20,7 +30,8 @@ const getPostCommentsById = (postId:number) => {
   
 const PostService = {
     getAllPosts,
-    getPostCommentsById
+    getPostCommentsById,
+    getPostById
   }
   
 export default PostService
