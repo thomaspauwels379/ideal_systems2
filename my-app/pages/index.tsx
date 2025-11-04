@@ -20,7 +20,6 @@ const Home: React.FC = () => {
     const parsedPosts:Post[] = await response.json();
     setUnfilteredPosts(parsedPosts);
     setFilteredPosts(parsedPosts);
-    console.log(parsedPosts)
   }
 
   useEffect(()=> {
@@ -32,7 +31,7 @@ const Home: React.FC = () => {
   },[filter])
 
   return (
-    <main className="">
+    <main>
       <Searchbar setInput={setFilter} placeholder={"search post titles"}/>
       {errorMessage && (
         <div>

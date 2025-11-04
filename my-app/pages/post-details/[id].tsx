@@ -61,7 +61,7 @@ const Home: React.FC = () => {
   },[router.isReady])
 
   return (
-    <main className="">
+    <main>
         <Link href={"/"}><button>Close</button></Link>
         {errorMessage && (
           <div>
